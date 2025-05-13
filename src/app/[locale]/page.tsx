@@ -1,13 +1,17 @@
 import MainLayout from '@/components/layout/main-layout';
 import { getTranslations } from 'next-intl/server';
 
+type Params = { locale: string };
+
+interface PageProps {
+  params: Params;
+  searchParams?: Record<string, string | string[] | undefined>;
+}
+
 export default async function Home({
   params
-}: {
-  params: Promise<{ locale: string }>
-}) {
-  // In Next.js 15, we need to properly await params
-  const locale = (await params).locale;
+}: PageProps) {
+  const { locale } = params;
   
   const t = await getTranslations({ locale, namespace: 'HomePage' });
 

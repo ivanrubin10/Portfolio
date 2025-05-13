@@ -19,13 +19,14 @@ export function generateStaticParams() {
   return locales.map(locale => ({ locale }));
 }
 
+type Params = { locale: string };
+
 export async function generateMetadata({
   params
 }: {
-  params: Promise<{ locale: string }>
+  params: Params
 }): Promise<Metadata> {
-  // In Next.js 15, we need to properly await params
-  const locale = (await params).locale;
+  const { locale } = params;
   
   const t = await getTranslations({
     locale,
@@ -38,15 +39,16 @@ export async function generateMetadata({
   };
 }
 
-export default async function LocaleLayout({ 
-  children, 
-  params
-}: {
+interface LocaleLayoutProps {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
-}) {
-  // In Next.js 15, we need to properly await params
-  const locale = (await params).locale;
+  params: Params;
+}
+
+export default async function LocaleLayout({
+  children,
+  params
+}: LocaleLayoutProps) {
+  const { locale } = params;
 
   // Validate the locale
   if (!locales.includes(locale)) notFound();

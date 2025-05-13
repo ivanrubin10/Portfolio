@@ -111,5 +111,6 @@ module.exports = {
       },
     },
   },
-  plugins: ['tw-animate-css/plugin'],
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  plugins: [require('tw-animate-css/plugin')],
 } 
