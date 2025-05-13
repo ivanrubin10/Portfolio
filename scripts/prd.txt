@@ -1,0 +1,129 @@
+# Portfolio Website PRD (Product Requirements Document)
+
+## Project Overview
+Create a modern, responsive, and visually appealing developer portfolio website for Ivan Eric Rubin that effectively showcases his skills, projects, and experience to potential employers and clients. The portfolio should feature a modern design with vivid colors while maintaining excellent performance, SEO optimization, and accessibility.
+
+## Technical Requirements
+
+### Core Technologies
+- **Framework**: Next.js v15.3.2 with App Router
+- **Language**: TypeScript v5+
+- **Styling**: TailwindCSS v4+ with custom color palette
+- **Frontend Components**: Shadcn UI (built on Radix)
+- **State Management**: React hooks with Context API
+- **Animation**: Framer Motion v12.10.1
+- **Database**: Supabase (PostgreSQL) for storing portfolio data and user authentication
+- **Authentication**: NextAuth.js v5 for admin access
+- **Deployment**: Vercel
+
+### Database Schema
+- **Projects**: id, title, description, repository_url, live_url, image_url, featured (boolean), created_at, updated_at
+- **Skills**: id, name, category, level, icon, created_at, updated_at
+- **Project_Skills**: project_id, skill_id (join table)
+- **Contents**: id, section, title, content, language, created_at, updated_at
+
+## Functional Requirements
+
+### 1. Multi-language Support
+- Implement a language switcher at the top of the page (English/Spanish).
+- All content must be available in both languages.
+- Language selection should persist between sessions.
+- The language switcher should be visible and accessible on all devices.
+
+### 2. PDF Information Display
+- Extract and display information from the PDF files in the project root.
+- Present professional experience, education, and skills in a well-organized manner.
+- Resume/CV data should be stored in the database for easy updates.
+
+### 3. Modern UI with Vivid Colors
+- Implement a vibrant color palette that creates visual interest.
+- Use color psychology to convey creativity and technical expertise.
+- Ensure all text maintains a minimum contrast ratio of 4.5:1 for accessibility standards.
+- Implement a dark/light mode toggle that respects system preferences but allows manual override.
+
+### 4. Projects Showcase
+- Create an interactive projects gallery with filtering capabilities.
+- Each project card should display:
+  - Project title
+  - Brief description
+  - Used technologies/skills (with visual icons)
+  - Links to repository and live version
+  - Preview image
+- Projects should be easily added via the admin panel by supplying a repository URL and optional live URL.
+- Project data should be fetched and updated from GitHub API when possible.
+
+### 5. Skills Management
+- Create a visually engaging skills section.
+- Allow skills to be linked to specific projects.
+- Display related skills on project cards.
+- Skills should be categorized (Frontend, Backend, Tools, etc.).
+- Skills should be manageable through the admin panel.
+
+### 6. Admin Panel
+- Implement a secure admin area with authentication.
+- Use Supabase Authentication or NextAuth.js v5 for auth providers.
+- The admin panel should include:
+  - Content editor for updating all text on the website.
+  - Project manager for adding/editing/removing projects.
+  - Skills manager for adding/editing/removing skills and linking them to projects.
+  - Media manager for uploading and managing images.
+  - Language editor for managing translations.
+- All changes made in the admin panel should be reflected immediately on the website.
+
+### 7. Performance and SEO
+- Achieve a minimum Lighthouse score of 90+ across all categories.
+- Implement server-side rendering for critical pages.
+- Optimize image loading with Next.js Image component.
+- Implement proper metadata, Open Graph tags, and structured data.
+- Ensure all pages have appropriate titles, descriptions, and alt text.
+- Implement sitemap.xml and robots.txt.
+
+### 8. Personalization and Animation
+- Include subtle animations to enhance user experience using Framer Motion.
+- Add interactive elements that showcase technical skills.
+- Use icons and illustrations to create a friendly, approachable feel.
+- Balance professional presentation with personality touches.
+- Incorporate micro-interactions that delight users without being distracting.
+
+## User Experience Requirements
+
+### General User Flow
+1. Visitor lands on homepage with a striking hero section.
+2. About section presents professional experience and skills.
+3. Projects section showcases work with interactive elements.
+4. Contact section provides clear ways to get in touch.
+
+### Recruiter-Specific Considerations
+- Prominent display of relevant experience and skills.
+- Clear demonstration of technical capabilities through project examples.
+- Easy access to CV/resume information.
+- Clean, professional appearance with personality elements.
+- Quick loading times and smooth interactions that demonstrate technical competence.
+
+## Visual Design Requirements
+- **Color Palette**: A primary palette of vivid colors with complementary accent colors.
+- **Typography**: Modern, clean font combinations with clear hierarchy.
+- **Layout**: Responsive grid-based layout with consistent spacing.
+- **Icons and Images**: Custom or curated icons that match the overall aesthetic.
+- **Animations**: Subtle, purposeful animations that enhance the user experience.
+
+## Non-Functional Requirements
+- **Accessibility**: WCAG 2.1 AA compliance, including keyboard navigation and screen reader support.
+- **Browser Compatibility**: Support for the latest versions of Chrome, Firefox, Safari, and Edge.
+- **Performance**: Page load under 2 seconds, optimal Core Web Vitals.
+- **Security**: Secure authentication, HTTPS, and proper input validation.
+- **Maintainability**: Well-structured code with clear documentation.
+
+## Future Enhancements (Stretch Goals)
+- Blog section for sharing technical articles and insights.
+- Case studies for featured projects with detailed breakdowns.
+- Interactive resume builder that generates a custom PDF based on selected sections.
+- Testimonials or recommendations section linked to LinkedIn API.
+- Analytics dashboard in the admin panel.
+
+## Implementation Timeline
+- **Phase 1**: Core website structure, responsive design, and content display.
+- **Phase 2**: Projects section with GitHub integration and skills linking.
+- **Phase 3**: Admin panel with content management capabilities.
+- **Phase 4**: Multi-language support and optimizations.
+- **Phase 5**: SEO, performance tuning, and final polish. 

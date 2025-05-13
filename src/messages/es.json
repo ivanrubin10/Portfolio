@@ -1,0 +1,159 @@
+{
+  "Common": {
+    "loading": "Cargando...",
+    "error": "Ha ocurrido un error.",
+    "notFound": "No encontrado",
+    "backToHome": "Volver al inicio",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "submit": "Enviar",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "close": "Cerrar",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "required": "Requerido"
+  },
+  "Navigation": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "contact": "Contacto",
+    "login": "Iniciar sesión",
+    "register": "Registrarse",
+    "logout": "Cerrar sesión",
+    "admin": "Administrador",
+    "profile": "Perfil",
+    "settings": "Ajustes",
+    "menu": "Menú",
+    "theme": "Tema",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
+  },
+  "LanguageSelector": {
+    "label": "Idioma",
+    "en": "Inglés",
+    "es": "Español"
+  },
+  "HomePage": {
+    "title": "Bienvenido a mi portafolio",
+    "subtitle": "Desarrollador, Diseñador, Creador",
+    "ctaButton": "Ver proyectos",
+    "latestProjects": "Proyectos recientes",
+    "featuredSkills": "Habilidades destacadas"
+  },
+  "ProjectsPage": {
+    "title": "Proyectos",
+    "emptyState": "No se encontraron proyectos",
+    "filterLabel": "Filtrar por tecnología",
+    "allProjects": "Todos los proyectos", 
+    "searchPlaceholder": "Buscar proyectos"
+  },
+  "SkillsPage": {
+    "title": "Habilidades y Experiencia",
+    "filters": {
+      "all": "Todas las habilidades",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "design": "Diseño",
+      "tools": "Herramientas"
+    }
+  },
+  "AboutPage": {
+    "title": "Sobre Mí",
+    "subtitle": "Conoce más sobre mi experiencia y formación",
+    "experienceTitle": "Experiencia Laboral",
+    "educationTitle": "Educación",
+    "skillsTitle": "Habilidades"
+  },
+  "ContactPage": {
+    "title": "Contáctame",
+    "subtitle": "Ponte en contacto conmigo a través del formulario o por email directamente.",
+    "form": {
+      "name": "Tu nombre",
+      "email": "Tu correo electrónico",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "submit": "Enviar mensaje",
+      "success": "¡Mensaje enviado con éxito! Te responderé pronto.",
+      "error": "Error al enviar el mensaje. Por favor, intenta de nuevo o envíame un email directamente."
+    }
+  },
+  "Footer": {
+    "copyright": "© {year} Mi Portafolio. Todos los derechos reservados.",
+    "madeWith": "Hecho con Next.js y Supabase",
+    "privacyPolicy": "Política de Privacidad",
+    "termsOfService": "Términos de Servicio",
+    "contactUs": "Contáctanos"
+  },
+  "Admin": {
+    "dashboard": "Panel de control",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "contents": "Contenidos",
+    "messages": "Mensajes",
+    "settings": "Configuración",
+    "title": "Panel de Administración"
+  },
+  "Auth": {
+    "login": {
+      "title": "Iniciar Sesión",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "submit": "Iniciar sesión",
+      "forgotPassword": "¿Olvidaste tu contraseña?",
+      "noAccount": "¿No tienes una cuenta?",
+      "signUp": "Regístrate",
+      "success": "Sesión iniciada correctamente",
+      "error": "Correo electrónico o contraseña incorrectos"
+    },
+    "register": {
+      "title": "Registrarse",
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "confirmPassword": "Confirmar contraseña",
+      "submit": "Registrarse",
+      "hasAccount": "¿Ya tienes una cuenta?",
+      "signIn": "Inicia sesión",
+      "success": "Registro exitoso",
+      "error": "Error en el registro"
+    },
+    "forgotPassword": {
+      "title": "Recuperar Contraseña",
+      "email": "Correo electrónico",
+      "submit": "Restablecer contraseña",
+      "backToLogin": "Volver al inicio de sesión",
+      "success": "Correo de restablecimiento enviado",
+      "error": "Error al enviar el correo de restablecimiento"
+    },
+    "resetPassword": {
+      "title": "Restablecer Contraseña",
+      "password": "Nueva contraseña",
+      "confirmPassword": "Confirmar nueva contraseña",
+      "submit": "Actualizar contraseña",
+      "success": "Contraseña actualizada correctamente",
+      "error": "Error al actualizar la contraseña"
+    }
+  },
+  "Profile": {
+    "title": "Perfil",
+    "personalInfo": "Información Personal",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "bio": "Biografía",
+    "updateProfile": "Actualizar perfil",
+    "changePassword": "Cambiar contraseña",
+    "success": "Perfil actualizado correctamente",
+    "error": "Error al actualizar el perfil"
+  },
+  "ErrorMessages": {
+    "required": "Este campo es obligatorio",
+    "invalidEmail": "Por favor, introduce un correo electrónico válido",
+    "passwordTooShort": "La contraseña debe tener al menos 6 caracteres",
+    "passwordsDoNotMatch": "Las contraseñas no coinciden",
+    "generalError": "Algo salió mal, por favor intenta de nuevo"
+  }
+} 

@@ -1,0 +1,16 @@
+{
+  "extends": ["next/core-web-vitals", "prettier"],
+  "rules": {
+    "react/no-unescaped-entities": "off",
+    "react/display-name": "off",
+    "react/jsx-curly-brace-presence": ["error", { "props": "never", "children": "never" }],
+    "@next/next/no-img-element": "off",
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }],
+    "no-console": ["warn", { "allow": ["warn", "error"] }]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

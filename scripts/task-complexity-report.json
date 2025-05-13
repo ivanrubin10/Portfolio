@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "generatedAt": "2025-05-13T01:39:40.125Z",
+    "tasksAnalyzed": 15,
+    "thresholdScore": 5,
+    "projectName": "Your Project Name",
+    "usedResearch": true
+  },
+  "complexityAnalysis": [
+    {
+      "taskId": 1,
+      "taskTitle": "Project Setup and Configuration",
+      "complexityScore": 6,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Break down the process of initializing a new Next.js project with TypeScript, TailwindCSS, Shadcn UI, and Framer Motion. Include configuration of ESLint/Prettier, environment variables, Git setup, and organizing the directory structure based on Next.js App Router conventions.",
+      "reasoning": "The setup involves multiple tooling integrations (Next.js, TypeScript, TailwindCSS, Shadcn UI, Framer Motion) and project configuration (ESLint, Prettier, env files, Git). Each step is well-documented, but coordinating dependencies and ensuring consistent configuration across tools adds moderate complexity."
+    },
+    {
+      "taskId": 2,
+      "taskTitle": "Supabase Integration and Database Schema Setup",
+      "complexityScore": 8,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Detail the steps for creating a Supabase project, designing and migrating the PostgreSQL schema, configuring relationships and indexes, integrating the Supabase client into Next.js, and implementing a typed data access layer.",
+      "reasoning": "Designing a normalized schema, implementing migrations, and integrating with a remote Supabase backend while ensuring type safety and relationship integrity requires advanced backend and full-stack skills."
+    },
+    {
+      "taskId": 3,
+      "taskTitle": "Authentication System Implementation",
+      "complexityScore": 9,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "List the main phases for implementing NextAuth.js v5, configuring providers, building authentication and registration UIs, session management, integrating with Supabase user storage, and adding security features like CSRF protection.",
+      "reasoning": "Authentication systems are complex due to security, multiple flows (login, register, reset), route protection, and integration between NextAuth.js and Supabase. Ensuring secure and seamless UX is non-trivial."
+    },
+    {
+      "taskId": 4,
+      "taskTitle": "Core Layout and Theme Implementation",
+      "complexityScore": 7,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Break down building the main layout, header/footer, responsive navigation, theme context, dark/light mode toggle, and accessibility/color contrast enforcement.",
+      "reasoning": "Establishing a scalable layout and theming system involves React context, local storage, accessibility, and responsive design. Each must integrate smoothly for a polished UX."
+    },
+    {
+      "taskId": 5,
+      "taskTitle": "Multi-language Support System",
+      "complexityScore": 7,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Identify the key steps to set up i18n, manage translation files, context and hooks, language switching UI, and dynamic routing for language support, including local storage and formatting utilities.",
+      "reasoning": "Internationalization involves multiple touchpoints: translation management, runtime language switching, context setup, and locale-based formatting. Requires careful planning but utilizes established libraries."
+    },
+    {
+      "taskId": 6,
+      "taskTitle": "Homepage and Hero Section",
+      "complexityScore": 6,
+      "recommendedSubtasks": 3,
+      "expansionPrompt": "Outline the steps to design and implement a responsive, animated hero section with branding, accessibility, SEO, and smooth transitions.",
+      "reasoning": "The homepage requires creative design, animation, responsive layouts, and accessibility, but uses standard component patterns. The SEO and animation integration add moderate complexity."
+    },
+    {
+      "taskId": 7,
+      "taskTitle": "About Section with PDF Data Integration",
+      "complexityScore": 8,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "List the phases to parse PDF resumes, extract and validate structured data, store in Supabase, and build dynamic, internationalized UI components for displaying experience and education.",
+      "reasoning": "Parsing PDFs and reliably extracting structured data is technically complex, and integrating this with a dynamic, editable UI and Supabase introduces both backend and frontend challenges."
+    },
+    {
+      "taskId": 8,
+      "taskTitle": "Projects Showcase Implementation",
+      "complexityScore": 8,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Break down designing the projects gallery, integrating GitHub API, implementing filtering, responsive layouts, image handling, and internationalization.",
+      "reasoning": "Requires advanced UI design, third-party API integration, filtering, and performance optimizations. Ensuring scalability and smooth UX increases the complexity."
+    },
+    {
+      "taskId": 9,
+      "taskTitle": "Skills Management System",
+      "complexityScore": 7,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Identify the main steps for building visual skills components, categorization, linking with projects, filtering, and internationalization.",
+      "reasoning": "While skills display is mostly frontend, linking with projects, dynamic filtering, and ensuring internationalization and responsiveness add layered complexity."
+    },
+    {
+      "taskId": 10,
+      "taskTitle": "Admin Panel - Content Management",
+      "complexityScore": 8,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Detail the sequence for building the admin dashboard, rich content editor, translation management, content validation/versioning, live preview, and analytics.",
+      "reasoning": "Content management requires dynamic UI, validation, real-time updates, translation workflows, and analytics, making it a complex, multi-faceted system."
+    },
+    {
+      "taskId": 11,
+      "taskTitle": "Admin Panel - Projects and Skills Management",
+      "complexityScore": 8,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "List the core steps for project/skill CRUD interfaces, validation, linking, image uploads, GitHub data fetching, and drag-and-drop ordering.",
+      "reasoning": "Requires robust form validation, file handling, third-party integration, and interactive UI features like drag-and-drop, all while maintaining data integrity."
+    },
+    {
+      "taskId": 12,
+      "taskTitle": "Contact Section Implementation",
+      "complexityScore": 6,
+      "recommendedSubtasks": 3,
+      "expansionPrompt": "Describe the steps to design and validate the contact form, handle submissions, implement spam protection, display contact info, and internationalize the UI.",
+      "reasoning": "Form design and validation are standard, but integrating spam protection, analytics, and internationalization adds moderate complexity."
+    },
+    {
+      "taskId": 13,
+      "taskTitle": "Performance Optimization and SEO",
+      "complexityScore": 9,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Define the steps for optimizing images, lazy loading, code splitting, implementing SEO metadata, structured data, sitemaps, caching, and performance monitoring.",
+      "reasoning": "Performance and SEO involve cross-cutting concerns, require auditing, in-depth configuration, and knowledge of Next.js optimization strategies, making this highly complex."
+    },
+    {
+      "taskId": 14,
+      "taskTitle": "Accessibility Implementation",
+      "complexityScore": 9,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "List the primary actions for enforcing semantic HTML, ARIA, keyboard navigation, color contrast, accessible animations, and dynamic content announcements.",
+      "reasoning": "Achieving WCAG 2.1 AA compliance across a complex app requires meticulous review, testing, and often custom solutions, demanding significant expertise."
+    },
+    {
+      "taskId": 15,
+      "taskTitle": "Deployment and CI/CD Setup",
+      "complexityScore": 8,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Detail the stages for Vercel deployment setup, configuring environment variables and domains, implementing CI/CD pipelines, automated testing, monitoring, and database migration workflows.",
+      "reasoning": "Modern CI/CD and deployment involves multiple environments, automated testing, secure secrets management, monitoring, and automated migrations, each with potential pitfalls and integration challenges."
+    }
+  ]
+}
