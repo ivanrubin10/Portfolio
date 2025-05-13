@@ -16,6 +16,11 @@ const protectedRoutes = [
 const i18nMiddleware = createMiddleware(routing);
 
 export async function middleware(request: NextRequest) {
+  // Skip middleware for the root path to avoid redirect loops
+  if (request.nextUrl.pathname === '/') {
+    return NextResponse.next();
+  }
+
   // First, handle the internationalization routing
   const i18nResponse = i18nMiddleware(request);
   
@@ -74,6 +79,6 @@ export async function middleware(request: NextRequest) {
 export const config = {
   // Match all pathnames except for
   // - … if they start with `/api/auth`, `/_next` or include `.`
-  // - … the root pathname
-  matcher: ['/((?!api/auth|_next|.*\\..*).*)'],
+  // - … the root pathname ('/')
+  matcher: ['/((?!api/auth|_next|.*\\..*|$).*)'],
 }; 

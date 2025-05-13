@@ -1,6 +1,19 @@
-import { redirect } from 'next/navigation';
-import { defaultLocale } from '@/i18n/routing';
+import { ReactNode } from 'react';
+import './globals.css';
 
-export default function RootLayout() {
-  redirect(`/${defaultLocale}`);
+export const metadata = {
+  title: 'Portfolio',
+  description: 'My professional portfolio',
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: ReactNode;
+}) {
+  return (
+    <html>
+      <body>{children}</body>
+    </html>
+  );
 } 
