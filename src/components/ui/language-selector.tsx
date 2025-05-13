@@ -21,10 +21,18 @@ export function LanguageSelector() {
   const [isPending, startTransition] = useTransition();
 
   const handleLocaleChange = (newLocale: string) => {
-    startTransition(() => {
-      router.replace(pathname, { locale: newLocale });
-      setIsOpen(false);
-    });
+    // Store language preference in localStorage for consistency
+    localStorage.setItem('preferredLanguage', newLocale);
+    
+    // Use direct navigation instead of router.replace to ensure consistent behavior
+    if (pathname === '/') {
+      window.location.href = `/${newLocale}`;
+    } else {
+      startTransition(() => {
+        router.replace(pathname, { locale: newLocale });
+        setIsOpen(false);
+      });
+    }
   };
 
   return (

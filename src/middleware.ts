@@ -17,11 +17,15 @@ const i18nMiddleware = createMiddleware(routing);
 
 export async function middleware(request: NextRequest) {
   try {
-    console.log(`Middleware handling path: ${request.nextUrl.pathname}`);
+    const pathname = request.nextUrl.pathname;
+    console.log(`Middleware handling path: ${pathname}`);
     
-    // Skip middleware for the root path to avoid redirect loops
-    if (request.nextUrl.pathname === '/') {
-      console.log('Skipping middleware for root path');
+    // Skip middleware for the root path, static assets and API routes to avoid redirect loops
+    const skipPaths = ['/', '/_next', '/api/auth', '/favicon.ico'];
+    const shouldSkip = skipPaths.some(path => pathname === path || pathname.startsWith(path));
+    
+    if (shouldSkip) {
+      console.log(`Skipping middleware for path: ${pathname}`);
       return NextResponse.next();
     }
 
@@ -60,7 +64,6 @@ export async function middleware(request: NextRequest) {
     );
 
     // Check if the request is for a protected route
-    const { pathname } = request.nextUrl;
     const isProtectedRoute = protectedRoutes.some(route => 
       pathname.startsWith(route) || pathname === route
     );
@@ -96,9 +99,10 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   // Match all pathnames except for:
-  // - Root path (/)
   // - API auth routes (/api/auth/*)
   // - Next.js internal routes (/_next/*)
-  // - Files with extensions (*.*)
-  matcher: ['/((?!api/auth|_next|.*\\..*|$).*)'],
+  // - Files with extensions (.*\\..*) 
+  matcher: [
+    '/((?!api/auth|_next|.*\\..*).*)' // This includes the root path
+  ],
 }; 
