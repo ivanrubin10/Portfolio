@@ -4,7 +4,7 @@ import { getTranslations } from 'next-intl/server';
 export default async function Home({
   params
 }: {
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }) {
   // In Next.js 15, we need to properly await params
   const locale = (await params).locale;

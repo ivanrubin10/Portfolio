@@ -22,7 +22,7 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params
 }: {
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }): Promise<Metadata> {
   // In Next.js 15, we need to properly await params
   const locale = (await params).locale;
@@ -43,7 +43,7 @@ export default async function LocaleLayout({
   params
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
   // In Next.js 15, we need to properly await params
   const locale = (await params).locale;
